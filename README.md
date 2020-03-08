@@ -19,5 +19,6 @@ Preview:
 <img src=https://static.wixstatic.com/media/63ae1a_13d19846a82f4e24b231e4215c6da178~mv2.jpg/v1/fill/w_600,h_1233,al_c,q_85,usm_0.66_1.00_0.01/Screenshot_20200305-222746_Beats%20Audio_j.webp width=200 height=400>
 
 
+Beats Audio has been updated to 1.2. This version fixes a crashing bug when clicking the foreground notification when the user in on the equalizer screen (opened through the app). That being said, you will no longer be able to open your system's built-in equalizer when Beats Audio is enabled; however, you can still open it through your settings, or disable Beats Audio and opening the equalizer through the app (NOTE: you do not need Beats Audio enabled to hear equalizer customizations!).
 
 NOTE: Requires Android 6.0 (Marshmellow) or later to run this app.
