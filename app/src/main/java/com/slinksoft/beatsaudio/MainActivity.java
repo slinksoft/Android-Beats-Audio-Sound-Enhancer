@@ -12,6 +12,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -22,10 +23,11 @@ import androidx.core.content.ContextCompat;
 public class MainActivity extends AppCompatActivity {
     int sessionID= 0;
     int version = 1;
-    int revision = 0;
+    int revision = 2;
     Switch aSwitch;
     LoudnessEnhancer BAEffect;
     TextView verDisp;
+    Button eq;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,17 +36,23 @@ public class MainActivity extends AppCompatActivity {
         aSwitch = findViewById(R.id.beatsAudioSwitch);
         BAEffect = new LoudnessEnhancer(sessionID);
         verDisp = findViewById(R.id.versionDisplay);
+        eq = findViewById(R.id.equalizerButton);
         verDisp.setText("Version: " + version + "." + revision);
         aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (aSwitch.isChecked())
                 {
+                    eq.setEnabled(false);
+                    eq.setVisibility(View.INVISIBLE);
                     applyBeatsAudio();
                     startService();
+
                 }
                 else if (!aSwitch.isChecked())
                 {
+                    eq.setEnabled(true);
+                    eq.setVisibility(View.VISIBLE);
                     stopService();
                     disableBeatsAudio();
                 }
@@ -73,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyBeatsAudio()
     {
-        BAEffect.setTargetGain(500);
+        BAEffect.setTargetGain(520);
         BAEffect.setEnabled(true);
     }
 
