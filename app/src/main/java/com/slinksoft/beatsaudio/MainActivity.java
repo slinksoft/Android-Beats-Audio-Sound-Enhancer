@@ -6,12 +6,14 @@ import android.app.NotificationManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.audiofx.AudioEffect;
+import android.media.audiofx.BassBoost;
 import android.media.audiofx.LoudnessEnhancer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
+import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     int revision = 2;
     Switch aSwitch;
     LoudnessEnhancer BAEffect;
+    BassBoost BassEffect;
     TextView verDisp;
     Button eq;
     @Override
@@ -35,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         aSwitch = findViewById(R.id.beatsAudioSwitch);
         BAEffect = new LoudnessEnhancer(sessionID);
+        BassEffect = new BassBoost(0, sessionID);
         verDisp = findViewById(R.id.versionDisplay);
         eq = findViewById(R.id.equalizerButton);
         verDisp.setText("Version: " + version + "." + revision);
@@ -81,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyBeatsAudio()
     {
-        BAEffect.setTargetGain(520);
+        BAEffect.setTargetGain(1500);
         BAEffect.setEnabled(true);
+        BassEffect.setStrength((short) 800);
+        BassEffect.setEnabled(true);
     }
 
     private void disableBeatsAudio()
