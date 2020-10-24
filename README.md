@@ -1,6 +1,5 @@
 # Android-Beats-Audio-Sound-Enhancer
 
-NOTICE AS OF 10/23/2020: As of the latest update to Android 10, Google has finally fully deprecated appyling sound enchancements to a global audio source (ID: 0), therefore, this app no longer works. It will work on earlier versions of Android though.
 
 A sound enhancer for Android; revives the old "Beats Audio" mod for non-HTC phones
 
