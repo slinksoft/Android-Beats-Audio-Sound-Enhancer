@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity {
     int revision = 6;
     Switch aSwitch;
     LoudnessEnhancer BAEffect;
-    BassBoost BassEffect;
     TextView verDisp;
     Button eq;
     @Override
@@ -38,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         aSwitch = findViewById(R.id.beatsAudioSwitch);
         BAEffect = new LoudnessEnhancer(sessionID);
-        BassEffect = new BassBoost(0, sessionID);
         verDisp = findViewById(R.id.versionDisplay);
         eq = findViewById(R.id.equalizerButton);
         verDisp.setText("Version: " + version + "." + revision);
@@ -85,10 +83,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyBeatsAudio()
     {
-        BAEffect.setTargetGain(1500);
+        BAEffect.setTargetGain(1300);
         BAEffect.setEnabled(true);
-        BassEffect.setStrength((short) 800);
-        BassEffect.setEnabled(true);
     }
 
     private void disableBeatsAudio()
