@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Beats Audio</string>
     <string name="label1"><b><u>Enable Beats Audio</u></b></string>
+    <string name="disclaimer"><u>DISCLAIMER</u>\nWhile the enhancements that this app provides will work with any
+    speaker (including the built-in phone speaker), we recommend using these enhancements with headphones!
+    Quality of enhancements are limited depending on the type headphones or speakers you use.</string>
 </resources>
