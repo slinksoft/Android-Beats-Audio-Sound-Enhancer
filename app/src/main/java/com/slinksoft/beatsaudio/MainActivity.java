@@ -25,7 +25,7 @@ import androidx.core.content.ContextCompat;
 public class MainActivity extends AppCompatActivity {
     int sessionID= 0;
     int version = 1;
-    int revision = 2;
+    int revision = 6;
     Switch aSwitch;
     LoudnessEnhancer BAEffect;
     BassBoost BassEffect;
