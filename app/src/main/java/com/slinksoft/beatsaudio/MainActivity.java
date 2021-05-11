@@ -25,7 +25,7 @@ import androidx.core.content.ContextCompat;
 public class MainActivity extends AppCompatActivity {
     int sessionID= 0;
     int version = 1;
-    int revision = 6;
+    int revision = 8;
     Switch aSwitch;
     LoudnessEnhancer BAEffect;
     TextView verDisp;
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyBeatsAudio()
     {
-        BAEffect.setTargetGain(1300);
+        BAEffect.setTargetGain(620);
         BAEffect.setEnabled(true);
     }
 
