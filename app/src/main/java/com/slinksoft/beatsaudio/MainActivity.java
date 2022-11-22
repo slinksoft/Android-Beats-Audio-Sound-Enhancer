@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void applyBeatsAudio()
     {
-        BAEffect.setTargetGain(620);
+        BAEffect.setTargetGain(860);
         BAEffect.setEnabled(true);
     }
 
